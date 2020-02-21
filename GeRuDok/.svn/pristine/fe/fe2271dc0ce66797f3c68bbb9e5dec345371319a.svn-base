@@ -1,0 +1,307 @@
+package actions;
+
+import java.lang.ProcessBuilder.Redirect;
+
+public class ActionManager {
+	
+	private OpenAboutAction openAboutAction;
+	private CloseProjectAction closeProjectAction;
+	private RenameAction renameAction;
+	private CloseAllTabs closeAllTabs;
+	private CloseTab closeTab;
+	private NewNodeAction newNodeAction;
+	private SaveProjectAction saveProjectAction;
+	private OpenProjectAction openProjectAction;
+	private SwitchWSAction switchWSAction;
+	private SaveASProjectAction saveASProjectAction;
+	private SaveWSAction saveWSAction;
+	private PHandCursorAction pHandCursorAction;
+	private RectangleAction rectangleAction;
+	private CircleAction circleAction;
+	private TriangleAction triangleAction;
+	private ResizeAction resizeAction;
+	private RotateAction rotateAction;
+	private UndoAction undoAction;
+	private RedoAction redoAction;
+	private DeleteElementAction deleteElementAction;
+	private CopyAction copyAction;
+	private CutAction cutAction;
+	private PasteAction pasteAction;
+	private MoveAction moveAction;
+	private ShareDocumentAction shareDocumentAction;
+	private ShareInProjectAction shareInProjectAction;
+	private PasteDocumentAction pasteDocumentAction;
+	private SetTypeAction setTypeAction;
+	
+	public ActionManager(){
+		initialiseActions();
+	}
+	
+	private void initialiseActions() {
+		renameAction = new RenameAction();
+		openAboutAction = new OpenAboutAction();
+		closeProjectAction = new CloseProjectAction();
+		closeAllTabs = new CloseAllTabs();
+		closeTab = new CloseTab();
+		newNodeAction = new NewNodeAction();
+		saveProjectAction = new SaveProjectAction();
+		openProjectAction = new OpenProjectAction();
+		switchWSAction = new SwitchWSAction();
+		saveASProjectAction = new SaveASProjectAction();
+		saveWSAction = new SaveWSAction();
+		pHandCursorAction = new PHandCursorAction();
+		rectangleAction = new RectangleAction();
+		circleAction = new CircleAction();
+		triangleAction = new TriangleAction();
+		resizeAction = new ResizeAction();
+		rotateAction = new RotateAction();
+		undoAction = new UndoAction();
+		redoAction = new RedoAction();
+		deleteElementAction = new DeleteElementAction();
+		copyAction = new CopyAction();
+		cutAction = new CutAction();
+		pasteAction = new PasteAction();
+		moveAction = new MoveAction();
+		shareDocumentAction = new ShareDocumentAction();
+		shareInProjectAction = new ShareInProjectAction();
+		pasteDocumentAction = new PasteDocumentAction();
+		setTypeAction = new SetTypeAction();
+	}
+
+	
+	
+	public DeleteElementAction getDeleteElementAction() {
+		return deleteElementAction;
+	}
+
+	public void setDeleteElementAction(DeleteElementAction deleteElementAction) {
+		this.deleteElementAction = deleteElementAction;
+	}
+
+	public TriangleAction getTriangleAction() {
+		return triangleAction;
+	}
+
+	public void setTriangleAction(TriangleAction triangleAction) {
+		this.triangleAction = triangleAction;
+	}
+	
+	public SetTypeAction getSetTypeAction() {
+		return setTypeAction;
+	}
+
+	public void setSetTypeAction(SetTypeAction setTypeAction) {
+		this.setTypeAction = setTypeAction;
+	}
+
+	public PasteDocumentAction getPasteDocumentAction() {
+		return pasteDocumentAction;
+	}
+
+	public void setPasteDocumentAction(PasteDocumentAction pasteDocumentAction) {
+		this.pasteDocumentAction = pasteDocumentAction;
+	}
+
+	public ShareInProjectAction getShareInProjectAction() {
+		return shareInProjectAction;
+	}
+
+	public void setShareInProjectAction(ShareInProjectAction shareInProjectAction) {
+		this.shareInProjectAction = shareInProjectAction;
+	}
+
+	public ShareDocumentAction getShareDocumentAction() {
+		return shareDocumentAction;
+	}
+
+	public void setShareDocumentAction(ShareDocumentAction shareDocumentAction) {
+		this.shareDocumentAction = shareDocumentAction;
+	}
+
+	public UndoAction getUndoAction() {
+		return undoAction;
+	}
+
+	public RedoAction getRedoAction() {
+		return redoAction;
+	}
+
+	public void setUndoAction(UndoAction undoAction) {
+		this.undoAction = undoAction;
+	}
+
+	public void setRedoAction(RedoAction redoAction) {
+		this.redoAction = redoAction;
+	}
+
+	public RotateAction getRotateAction() {
+		return rotateAction;
+	}
+
+	public void setRotateAction(RotateAction rotateAction) {
+		this.rotateAction = rotateAction;
+	}
+
+	public ResizeAction getResizeAction() {
+		return resizeAction;
+	}
+
+	public void setResizeAction(ResizeAction resizeAction) {
+		this.resizeAction = resizeAction;
+	}
+
+	public RectangleAction getRectangleAction() {
+		return rectangleAction;
+	}
+	
+	
+
+	public CircleAction getCircleAction() {
+		return circleAction;
+	}
+
+	public void setCircleAction(CircleAction circleAction) {
+		this.circleAction = circleAction;
+	}
+
+	public void setRectangleAction(RectangleAction rectangleAction) {
+		this.rectangleAction = rectangleAction;
+	}
+
+	public OpenProjectAction getOpenProjectAction() {
+		return openProjectAction;
+	}
+
+	public SaveWSAction getSaveWSAction() {
+		return saveWSAction;
+	}
+
+	public void setSaveWSAction(SaveWSAction saveWSAction) {
+		this.saveWSAction = saveWSAction;
+	}
+
+	public SaveASProjectAction getSaveASProjectAction() {
+		return saveASProjectAction;
+	}
+
+	public void setSaveASProjectAction(SaveASProjectAction saveASProjectAction) {
+		this.saveASProjectAction = saveASProjectAction;
+	}
+
+	public void setOpenProjectAction(OpenProjectAction openProjectAction) {
+		this.openProjectAction = openProjectAction;
+	}
+
+	public SaveProjectAction getSaveProjectAction() {
+		return saveProjectAction;
+	}
+	
+
+	public SwitchWSAction getSwitchWSAction() {
+		return switchWSAction;
+	}
+
+	public void setSwitchWSAction(SwitchWSAction switchWSAction) {
+		this.switchWSAction = switchWSAction;
+	}
+
+	
+	
+	public PHandCursorAction getpHandCursorAction() {
+		return pHandCursorAction;
+	}
+
+	public void setpHandCursorAction(PHandCursorAction pHandCursorAction) {
+		this.pHandCursorAction = pHandCursorAction;
+	}
+
+	public void setSaveProjectAction(SaveProjectAction saveProjectAction) {
+		this.saveProjectAction = saveProjectAction;
+	}
+
+	public RenameAction getRenameAction() {
+		return renameAction;
+	}
+
+	public void setRenameAction(RenameAction renameAction) {
+		this.renameAction = renameAction;
+	}
+
+	public CloseProjectAction getCloseProjectAction() {
+		return closeProjectAction;
+	}
+
+	public void setCloseProjectAction(CloseProjectAction closeProjectAction) {
+		this.closeProjectAction = closeProjectAction;
+	}
+
+	
+
+	public OpenAboutAction getOpenAboutAction() {
+		return openAboutAction;
+	}
+
+	public void setOpenAboutAction(OpenAboutAction openAboutAction) {
+		this.openAboutAction = openAboutAction;
+	}
+
+	
+
+	public CloseAllTabs getCloseAllTabs() {
+		return closeAllTabs;
+	}
+
+	public void setCloseAllTabs(CloseAllTabs closeAllTabs) {
+		this.closeAllTabs = closeAllTabs;
+	}
+
+	public CloseTab getCloseTab() {
+		return closeTab;
+	}
+
+	public void setCloseTab(CloseTab closeTab) {
+		this.closeTab = closeTab;
+	}
+
+	public NewNodeAction getNewNodeAction() {
+		return newNodeAction;
+	}
+
+	public void setNewNodeAction(NewNodeAction newNodeAction) {
+		this.newNodeAction = newNodeAction;
+	}
+
+	public CopyAction getCopyAction() {
+		return copyAction;
+	}
+
+	public void setCopyAction(CopyAction copyAction) {
+		this.copyAction = copyAction;
+	}
+
+	public CutAction getCutAction() {
+		return cutAction;
+	}
+
+	public void setCutAction(CutAction cutAction) {
+		this.cutAction = cutAction;
+	}
+
+	public PasteAction getPasteAction() {
+		return pasteAction;
+	}
+
+	public void setPasteAction(PasteAction pasteAction) {
+		this.pasteAction = pasteAction;
+	}
+
+	public MoveAction getMoveAction() {
+		return moveAction;
+	}
+
+	public void setMoveAction(MoveAction moveAction) {
+		this.moveAction = moveAction;
+	}
+	
+	
+}
